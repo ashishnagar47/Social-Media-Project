@@ -1,10 +1,8 @@
 {
   "name": "socialmediaproject",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "author": "",
@@ -13,6 +11,16 @@
     "express": "^4.17.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
-    "sequelize": "^5.21.7"
-  }
+    "sequelize": "^5.21.10"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashishnagar47/Social-Media-Project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ashishnagar47/Social-Media-Project/issues"
+  },
+  "homepage": "https://github.com/ashishnagar47/Social-Media-Project#readme",
+  "description": ""
 }
