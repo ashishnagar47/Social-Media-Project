@@ -1,4 +1,5 @@
 function loadPost(){
+    const user=JSON.parse(window.localStorage.user).username;
     $.get('/api/posts',(posts)=>{
       for(let p of posts){
         $('#posts-container').append(
@@ -10,14 +11,10 @@ function loadPost(){
                         <p class="card-text">
                         ${p.body}<a href="#" id="read"> </a>
                         </p>
-                        <script>
-                        document.getElementById('read).onclick=function(){readMe()}
-                        function readMe(){
-                            document.getElementById('read').innerHTML=${(p.body)}
-                        }
-                        </script>
-                        <a href="#" class="card-link">Comments</a>
                         <a href="#" class="card-link">Like</a>
+                        
+                        <a href='/components/comments.html?user=${user}&post=${p.id}' class="comments" onclick="myFunction()">Comments</a>
+                        
                     </div>
                 </div>
           )
@@ -25,5 +22,7 @@ function loadPost(){
         
         )}
     })
-    
   }
+    
+
+  

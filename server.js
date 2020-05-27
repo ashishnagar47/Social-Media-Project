@@ -11,9 +11,11 @@ app.use(express.urlencoded({extended:true}))
 
 const {usersRoute}=require('./src/routes/users')
 const {postsRoute}=require('./src/routes/posts')
+const {commentsRoute} =require('./src/routes/posts/comments')
 
 app.use('/api/users',usersRoute)
 app.use('/api/posts',postsRoute)
+app.use('/api/comments',commentsRoute)
 app.use('/',express.static(__dirname+'/src/public'))
 
 

@@ -3,9 +3,11 @@ $(() => {
     $('#navbar').load('/components/navbar.html', loginIfNeeded)
     $('#footer').load('/components/footer.html')
     $('#contents').load('/components/all-posts.html') // this contains it's own scripts too
-    $('#contents').load('/components/myPosts.html')
+   // $('#contents').load('/components/myPosts.html')
   })
   
+
+  //localStorage.clear()
   function loginIfNeeded() {
     window.currentUser = window.localStorage.user ? JSON.parse(window.localStorage.user) : null
     if (!currentUser) {

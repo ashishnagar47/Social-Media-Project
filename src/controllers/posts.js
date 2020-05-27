@@ -56,7 +56,7 @@ module.exports={
 //       )
 //     )    
 
-// const posts=await findMyPosts('2')
+// const posts=await findAllPosts()
 //   for(let p of posts){
 //     console.log(`${p.title}\nauthor:${p.user.username}\n${p.body}\n================\n`)
 //   }

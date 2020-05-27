@@ -1,8 +1,10 @@
 const {Users,Posts,Comments}=require('../db/models')
 
-async function createNewComment(id,title,body){
+
+
+async function createNewComment(postid,title,body){
     const comment=Comments.create({
-        id,
+        postid,
         title,
         body
     }).catch((err)=>{
@@ -11,9 +13,28 @@ async function createNewComment(id,title,body){
     return comment
 }
 
-async function showComments(){
+async function showAllComments(){
     const comment=Comments.findAll({
-        include:Users,Posts
+        // include:[{model:Users},
+        //     {
+        //     model:Posts,
+        //     where:{id:id}
+        //     }]
+        
+    }).catch((err)=>{
+        console.log(err)
+    })
+    return comment
+}
+
+async function showComments(id){
+    const comment=Comments.findAll({
+        include:[{model:Users},
+            {
+            model:Posts,
+            where:{id:id}
+            }]
+        
     }).catch((err)=>{
         console.log(err)
     })
@@ -22,25 +43,25 @@ async function showComments(){
 
 module.exports={
     createNewComment,
-    showComments
+    showComments,
+    showAllComments
 }
 
 
 //Test Code 
 // async function task() {
 
-//     console.log(
 //       await createNewComment(
-//         '3',
+//         '2',
 //         'this is a sample title',
 //         'this is a sample Comment Body',
         
 //       )
-//     )    
+       
 
-// const comment=await showComments()
+// const comment=await showComments('2')
 //   for(let c of comment){
-//     console.log(`${c.post.title}\nauthor:${c.user.username}\n${c.body}\n================\n`)
+//     console.log(`${c.id}\nauthor:${c.title}\n${c.body}\n================\n`)
 //   }
 // }
 //  task()
