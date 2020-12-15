@@ -45,25 +45,25 @@ module.exports={
 *showAllPosts{title:};
 */
 //Test Code 
-// async function task() {
+async function task() {
 
-//     console.log(
-//       await createNewPost(
-//         '2',
-//         'this is a sample post',
-//         'this is a sample title',
+    console.log(
+      await createNewPost(
+        '2',
+        'this is a sample post',
+        'this is a sample title',
         
-//       )
-//     )    
+      )
+    )    
 
-// const posts=await findMyPosts('2')
-//   for(let p of posts){
-//     console.log(`${p.title}\nauthor:${p.user.username}\n${p.body}\n================\n`)
-//   }
-// }
-//  task()
+const posts=await findMyPosts('2')
+  for(let p of posts){
+    console.log(`${p.title}\nauthor:${p.user.username}\n${p.body}\n================\n`)
+  }
+}
+ task()
 
-// .catch((err)=>{
-//   console.log(err)
-// })
+.catch((err)=>{
+  console.log(err)
+})
 

@@ -27,18 +27,18 @@ module.exports={
 }
 
 
-//Teesting of code 
-// async function task(){
-//         console.log(await getUserById('2'))
-//         console.log('-------------------')
-//         console.log(await getUserById('2'))
-//         console.log('-------------------')
-//         console.log(await getUserById('2'))
-//         console.log('-------------------')
-//         console.log(await getUserById('2'))
-//         console.log('-------------------')
-// }task()
-//   .catch((err)=>{
-//   console.log(err)
-//   })
+//Testing of code 
+async function task(){
+        console.log(await getUserByUsername('tedious-chicken'))
+        console.log('-------------------')
+        console.log(await getUserById('3'))
+        console.log('-------------------')
+        console.log(await getUserById('2'))
+        console.log('-------------------')
+        console.log(await getUserById('2'))
+        console.log('-------------------')
+}task()
+  .catch((err)=>{
+  console.log(err)
+  })
 

@@ -8,7 +8,7 @@ $(()=>{
     
     
         $.post('/api/posts',{userId,title,body})
-        $("#content").load('/components/all-posts.html')
+        $("#contents").load('/components/all-posts.html')
 
     })
     
